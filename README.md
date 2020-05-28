@@ -34,4 +34,6 @@ You need to do is to mount the pages in a volume under `/usr/src/app` like this:
 ```bash
 docker run -it --rm -v "$PWD":/usr/src/app -p "4000:4000" starefossen/github-pages
 ```
+*Note: for Windows we advise Powershell or another shell that supports `$PWD`, for `cmd` you can replace `$PWD` with `%cd%`.*
+
 The Jekyll page will be available on `http://localhost:4000`.
