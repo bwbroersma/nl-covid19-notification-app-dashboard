@@ -26,7 +26,10 @@ Please prefix your file with 3 zero's and a dash (`000-`), it will be renamed to
 
 ## How to test GitHub Pages locally
 
-The [`starefossen/github-pages`](https://hub.docker.com/r/starefossen/github-pages) is a Alpine Docker image for running GitHub Pages / Jekyll projects locally while developing of only 70 MB.
+To build Jekyll, you could [install Jekyll locally](https://jekyllrb.com/docs/installation/) or probably the easier route: use a Docker image.
+To use a Docker image you should have Docker engine installed, see [how to install Docker enginge](https://docs.docker.com/engine/install/).
+
+[`starefossen/github-pages`](https://hub.docker.com/r/starefossen/github-pages) is a Alpine Docker image for running GitHub Pages / Jekyll projects locally while developing of only 70 MB.
 You need to do is to mount the pages in a volume under `/usr/src/app` like this:
 ```bash
 docker run -it --rm -v "$PWD":/usr/src/app -p "4000:4000" starefossen/github-pages
